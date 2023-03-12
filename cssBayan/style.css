@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.bayan-container {
+    width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.bayan-container__meme {
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+    border-bottom: 1px solid rgb(103, 103, 103);
+}
+
+.bayan-container__meme:hover .bayan-container__meme--img{
+    cursor: pointer;
+    display: block;
+    animation: showImg 0.5s ease-out;
+}
+
+.bayan-container__meme:hover .icon {
+    transform: rotate(45deg);
+    transition: all .2s;
+}
+
+.bayan-container__meme:focus .bayan-container__meme--img {
+    display: block;
+}
+
+.bayan-container__meme--text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bayan-container__meme--img {
+    display: none;
+    margin: 0 auto;
+}
+
+@keyframes showImg {
+    from {
+        opacity: 0;
+        transform: scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 90%;
+    }
+}
